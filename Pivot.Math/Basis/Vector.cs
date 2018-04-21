@@ -175,16 +175,12 @@ namespace Pivot.Math.Basis
 
         #region ICloneable Members
 
-        /// <summary>
-        /// Clona el vector
-        /// </summary>
-        /// <returns>Un vector con los mismos valores que el actual</returns>
         public object Clone()
         {
-            Vector V = new Vector(_length);
+            var vector = new Vector(_length);
             for (int i = 0; i < _length; i++)
-                V[i] = _values[i];
-            return V;
+                vector[i] = _values[i];
+            return vector;
         }
 
         #endregion
